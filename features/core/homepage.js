@@ -38,4 +38,16 @@ Then('I should see below table data', function (dataTable) {
 
 When('I enter login with valid {string} and {string} credential details', function (username, password) {
     console.log("user id is " + username + " and password is " + password);
-  });
+});
+
+Then('I should not see any other paragraph', function () {
+    console.log('this is demostration but keyword');
+});
+
+Then('I navigate to search screen', function () {
+    console.log('I navigate to search screen');
+});
+
+When('I search for ssn', function () {
+    console.log('I search for ssn');
+});

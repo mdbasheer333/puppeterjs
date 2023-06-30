@@ -20,12 +20,46 @@ Feature: To test home page functionality
     #         | basheer | 30  | India   |
     #         | naga    | 31  | US      |
 
-    Scenario: To test home page details
+    # Scenario Outline: To test home page details
+    #     Given I am on login page
+    #     When I enter login with valid "<UserName>" and "<Password>" credential details
+    #     Then I should see home page
+    #     But I should not see any other paragraph
+    #     Examples:
+    #         | UserName       | Password  |
+    #         | bash@gmail.com | bash#1234 |
+    #         | nag@gmail.com  | nag#1234  |
+    #         | demo@gmail.com | demo#1234 |
+
+    # Scenario: All done
+    #     Given I am out shopping
+    #     * I have eggs
+    #     * I have milk
+    #     * I have butter
+    #     When I check my list
+    #     Then I don't need anything
+
+    # this is comment not read by cucumber
+    Background: I am on app system
         Given I am on login page
-        When I enter login with valid "<UserName>" and "<Password>" credential details
+        When I enter login with valid credential details
         Then I should see home page
-        Examples:
-            | UserName       | Password  |
-            | bash@gmail.com | bash#1234 |
-            | nag@gmail.com  | nag#1234  |
-            | demo@gmail.com | demo#1234 |
+
+    @regression
+    Scenario: To test home page details1
+        And I shold also see "welcome to amazon" message
+    
+    @regression
+    @sanity
+    Scenario: To test home page details2
+        And I shold also see "welcome to amazon" message
+
+    @smoke @sanity
+    Scenario: To test some other page1
+        And I navigate to search screen
+        When I search for ssn
+   
+    @smoke
+    Scenario: To test some other page2
+        And I navigate to search screen
+        When I search for ssn
