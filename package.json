@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "cucumber-js --tags @regression or @sanity"
+    "test": "cucumber-js",
+    "myregrssion":"cucumber-js --tags @regression",
+    "mysantiy":"cucumber-js --tags @sanity"
   },
   "keywords": [
     "automation"
