@@ -20,16 +20,16 @@ Feature: To test home page functionality1111111111111
     #         | basheer | 30  | India   |
     #         | naga    | 31  | US      |
 
-    # Scenario Outline: To test home page details
-    #     Given I am on login page
-    #     When I enter login with valid "<UserName>" and "<Password>" credential details
-    #     Then I should see home page
-    #     But I should not see any other paragraph
-    #     Examples:
-    #         | UserName       | Password  |
-    #         | bash@gmail.com | bash#1234 |
-    #         | nag@gmail.com  | nag#1234  |
-    #         | demo@gmail.com | demo#1234 |
+    Scenario Outline: To test home page details
+        Given I am on login page
+        When I enter login with valid "<UserName>" and "<Password>" credential details
+        Then I should see home page
+        But I should not see any other paragraph
+        Examples:
+            | UserName       | Password  |
+            | bash@gmail.com | bash#1234 |
+            | nag@gmail.com  | nag#1234  |
+            | demo@gmail.com | demo#1234 |
 
     # Scenario: All done
     #     Given I am out shopping

@@ -1,6 +1,6 @@
 export default {
     import: ['./stepdefs/**/*.js'],
     publishQuiet: true,
-    paths: ["./features/adv/checkout.feature"],
+    paths: ["./features/search/searchtable.feature"],
     parallel: 1
 }
